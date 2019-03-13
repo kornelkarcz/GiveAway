@@ -7,5 +7,8 @@
 
 <h1>Welcome to GiveAway</h1>
 
+<a href="http://localhost:8080/register">Register</a><br>
+<a href="http://localhost:8080/login">Login</a><br>
+
 </body>
 </html>
