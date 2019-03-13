@@ -80,7 +80,6 @@
       <change afterPath="$PROJECT_DIR$/../SpringCMS/src/main/webapp/WEB-INF/views/categories/add.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../SpringCMS/src/main/webapp/WEB-INF/views/categories/all.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../SpringCMS/src/main/webapp/WEB-INF/views/categories/edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/User.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -143,7 +142,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
@@ -179,6 +178,15 @@
                 <element signature="e#3070#3071#0" expanded="true" />
                 <element signature="e#3116#3117#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/homepage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -239,6 +247,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -256,6 +265,7 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/utils/BCrypt.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Address.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/homepage.jsp" />
       </list>
     </option>
   </component>
@@ -336,6 +346,21 @@
               <item name="coderslab" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="GiveAway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GiveAway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GiveAway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GiveAway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -346,7 +371,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552472353894" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552472773734" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -451,16 +476,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552467320361</updated>
-      <workItem from="1552467326652" duration="3881000" />
+      <workItem from="1552467326652" duration="4128000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3881000" />
+    <option name="totallyTimeSpent" value="4128000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="812" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -482,7 +506,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32916668" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32916668" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -624,6 +648,13 @@
             <element signature="e#3070#3071#0" expanded="true" />
             <element signature="e#3116#3117#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/homepage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
