@@ -31,7 +31,7 @@ public class LogRegController {
             return "register";
         }
         userService.registerUser(user);
-        return "/";
+        return "redirect:/";
     }
 
 }
