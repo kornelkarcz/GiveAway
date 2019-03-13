@@ -16,7 +16,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/")
-@SessionAttributes("logged")
+@SessionAttributes({"logged", "isAdmin"})
 public class LogRegController {
 
     @Autowired
@@ -58,6 +58,8 @@ public class LogRegController {
             }
         }
         model.addAttribute("logged", logged);
+        model.addAttribute("isAdmin", logged.isAdmin());
+
         return "redirect:/";
     }
 
