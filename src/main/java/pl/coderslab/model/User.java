@@ -33,6 +33,10 @@ public class User {
 
     private boolean isAdmin;
 
+    @OneToOne
+    @JoinColumn(name = "address_id")
+    private Address address;
+
 
     public User() {
     }
