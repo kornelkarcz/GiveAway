@@ -4,16 +4,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import pl.coderslab.model.FakeUser;
 import pl.coderslab.model.User;
 import pl.coderslab.service.UserService;
+import pl.coderslab.utils.BCrypt;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 @RequestMapping("/")
+@SessionAttributes("logged")
 public class LogRegController {
 
     @Autowired
@@ -32,6 +35,36 @@ public class LogRegController {
         }
         userService.registerUser(user);
         return "redirect:/";
+    }
+
+    @GetMapping("login")
+    public String loginUser(Model model) {
+        model.addAttribute("fake", new FakeUser());
+        return "login/login";
+    }
+
+    @PostMapping("login")
+    public String loginUser(@ModelAttribute FakeUser fakeUser, Model model) {
+        List<User> users = userService.findAllUsers();
+        User logged = new User();
+        for (User tempUser : users) {
+            if (fakeUser.getEmail().equals(tempUser.getEmail())) {
+                if (BCrypt.checkpw(fakeUser.getPassword(), tempUser.getPassword())) {
+                    logged = tempUser;
+                    break;
+                } else {
+                    return "redirect:/login";
+                }
+            }
+        }
+        model.addAttribute("logged", logged);
+        return "redirect:/";
+    }
+
+    @GetMapping("logout")
+    public String logout(HttpSession session){
+        session.invalidate();
+        return "login/logout";
     }
 
 }
