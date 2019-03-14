@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import pl.coderslab.model.FakeUser;
 import pl.coderslab.model.User;
 import pl.coderslab.service.UserService;
@@ -16,7 +17,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/")
-@SessionAttributes({"logged", "isAdmin"})
+@SessionAttributes({"logged", "check"})
 public class LogRegController {
 
     @Autowired
@@ -44,7 +45,7 @@ public class LogRegController {
     }
 
     @PostMapping("login")
-    public String loginUser(@ModelAttribute FakeUser fakeUser, Model model) {
+    public String loginUser(@ModelAttribute FakeUser fakeUser, Model model, RedirectAttributes redirectAttributes) {
         List<User> users = userService.findAllUsers();
         User logged = new User();
         for (User tempUser : users) {
@@ -57,14 +58,18 @@ public class LogRegController {
                 }
             }
         }
+
+        boolean check = logged.isAdmin();
+        redirectAttributes.addFlashAttribute(check);
         model.addAttribute("logged", logged);
-        model.addAttribute("isAdmin", logged.isAdmin());
+        model.addAttribute("check", check);
+        System.out.println(check);
 
         return "redirect:/";
     }
 
     @GetMapping("logout")
-    public String logout(HttpSession session){
+    public String logout(HttpSession session) {
         session.invalidate();
         return "login/logout";
     }

@@ -23,7 +23,7 @@ public class AdminFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         HttpSession session = request.getSession(false);
 
-        boolean loggedAdmin = (session != null) && ((boolean)session.getAttribute("isAdmin"));
+        boolean loggedAdmin = (session != null) && ((boolean)session.getAttribute("check"));
 
         if (loggedAdmin) {
             chain.doFilter(request, response);
