@@ -18,7 +18,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 
-
+                    <li><a href="http://localhost:8080/admin/dashboard">Dashboard</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown">
                     <span class="caret">
@@ -35,8 +35,6 @@
 
 
                     <li><a href="http://localhost:8080/logout">Log out</a></li>
-                    <li><a href="http://localhost:8080/cart/"><span class="glyphicon glyphicon-shopping-cart"></span>
-                        Your Cart</a></li>
                 </ul>
             </div>
         </div>

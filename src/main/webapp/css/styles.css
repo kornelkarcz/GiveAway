@@ -36,10 +36,6 @@ html, body {
     clear: both;
 }
 
-/*header {*/
-    /*margin-bottom: 30px;*/
-/*}*/
-
 .main-container {
     padding-top: 50px;
     min-height: 100%;
@@ -53,4 +49,8 @@ html, body {
     padding-bottom: 50px;
     height: 100%;
     background-color: #f3f3f3;
+}
+
+.col-sm-4 {
+    padding-top: 50px;
 }
