@@ -26,4 +26,8 @@ public class UserService {
     public List<User> findAllUsers() {
         return userRepo.findAll();
     }
+
+    public List<User> findAllOrdinaryUsers() {
+        return userRepo.findAllNormalUsers();
+    }
 }

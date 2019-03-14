@@ -23,8 +23,8 @@ public class AdminController {
     }
 
     @GetMapping("/users")
-    public String getAllUsers(Model model) {
-        model.addAttribute("users", userService.findAllUsers());
+    public String getAllOrdinaryUsers(Model model) {
+        model.addAttribute("users", userService.findAllOrdinaryUsers());
         return "admin/users";
     }
 
