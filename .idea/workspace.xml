@@ -145,8 +145,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homepage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3855">
-              <caret line="257" selection-start-line="257" selection-end-line="257" />
+            <state relative-caret-position="210">
+              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
               <folding>
                 <element signature="e#10223#10229#0#HTML" expanded="true" />
               </folding>
@@ -175,8 +175,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
-              <caret line="74" column="1" lean-forward="true" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
+            <state relative-caret-position="2703">
+              <caret line="1816" column="1" lean-forward="true" selection-start-line="1816" selection-start-column="1" selection-end-line="1816" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -272,11 +272,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adminHeader.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/dashboard.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/users.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/styles.css" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/613cf0dc-1254-4681-b838-e1fed21ed76a/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/AdminController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/UserRepo.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/styles.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homepage.jsp" />
       </list>
     </option>
@@ -423,26 +423,6 @@
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="GiveAway" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GiveAway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GiveAway" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GiveAway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -454,7 +434,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552577662965" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552577845050" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -567,12 +547,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552467320361</updated>
-      <workItem from="1552467326652" duration="22611000" />
+      <workItem from="1552467326652" duration="22878000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22611000" />
+    <option name="totallyTimeSpent" value="22878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="812" extended-state="0" />
@@ -585,7 +565,7 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Persistence" side_tool="true" />
       <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Application Servers" weight="0.32916668" />
       <window_info anchor="bottom" id="Database Console" weight="0.32916668" />
@@ -906,15 +886,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="74" column="1" lean-forward="true" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
+        <state relative-caret-position="2703">
+          <caret line="1816" column="1" lean-forward="true" selection-start-line="1816" selection-start-column="1" selection-end-line="1816" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homepage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3855">
-          <caret line="257" selection-start-line="257" selection-end-line="257" />
+        <state relative-caret-position="210">
+          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
           <folding>
             <element signature="e#10223#10229#0#HTML" expanded="true" />
           </folding>
