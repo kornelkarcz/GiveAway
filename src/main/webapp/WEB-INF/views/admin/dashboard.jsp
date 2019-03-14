@@ -25,7 +25,7 @@
         <div class="col-sm-4"></div>
         <div class="col-sm-4">
             <div id="list-example" class="list-group">
-                <a class="list-group-item list-group-item-action" href="#">Users</a>
+                <a class="list-group-item list-group-item-action" href="http://localhost:8080/admin/users">Users</a>
                 <a class="list-group-item list-group-item-action" href="#">Advertisements</a>
                 <a class="list-group-item list-group-item-action" href="#">Institutions</a>
             </div>

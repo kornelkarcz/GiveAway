@@ -58,3 +58,23 @@ html, body {
 .col-sm-4 .list-group .list-group-item {
     text-align: center;
 }
+
+.index-table {
+    width: 100%;
+    background-color: #f3f3f3;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.index-table .table th {
+    text-align: center;
+}
+
+.index-table .table td {
+    text-align: center;
+}
+
+.table-container {
+    padding-left: 60px;
+    padding-right: 60px;
+}
