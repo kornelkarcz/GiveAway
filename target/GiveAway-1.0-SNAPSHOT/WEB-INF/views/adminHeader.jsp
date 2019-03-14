@@ -1,43 +1,55 @@
-<header>
-    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #204d74; color: white">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" style="font-size: 25px" href="http://localhost:8080/">GiveAway</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="http://localhost:8080/">Homepage</a></li>
-                    <li><a href="#">Advertisements</a></li>
-                    <li><a href="#">Institutions</a></li>
-                    <li><a href="#">Contact</a></li>
+<header class="header--form-page">
+    <nav class="container container--70">
+        <ul class="nav--actions">
+            <li class="logged-user">
+                Witaj ${logged.firstName}
+                <ul class="dropdown">
+                    <li><a href="#">Profil</a></li>
+                    <li><a href="#">Ustawienia</a></li>
+                    <li><a href="#">Moje zbiórki</a></li>
+                    <li><a href="http://localhost:8080/logout">Wyloguj</a></li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+            </li>
+        </ul>
 
-                    <li><a href="http://localhost:8080/admin/dashboard">Dashboard</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret">
+        <ul>
+            <li><a href="#" class="btn btn--without-border active">Start</a></li>
+            <li><a href="#" class="btn btn--without-border">O co chodzi?</a></li>
+            <li><a href="#" class="btn btn--without-border">O nas</a></li>
+            <li>
+                <a href="#" class="btn btn--without-border"
+                >Fundacje i organizacje</a
+                >
+            </li>
+            <li><a href="#" class="btn btn--without-border">Kontakt</a></li>
+            <li><a href="http://localhost:8080/login" class="btn btn--without-border">Zarządzaj</a></li>
+        </ul>
+    </nav>
 
-                    </span>&nbsp;
-                            Manage
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="active"><a href="#">Users</a></li>
-                            <li class="active"><a href="#">Institutions</a></li>
-                            <li class="active"><a href="#">Advertisements</a></li>
-                        </ul>
+    <div class="slogan container container--90">
+        <div class="slogan--item">
+            <h1>
+                Oddaj rzeczy, których już nie chcesz<br />
+                <span class="uppercase">potrzebującym</span>
+            </h1>
+
+            <div class="slogan--steps">
+                <div class="slogan--steps-title">Wystarczą 4 proste kroki:</div>
+                <ul class="slogan--steps-boxes">
+                    <li>
+                        <div><em>1</em><span>Wybierz rzeczy</span></div>
                     </li>
-
-
-                    <li><a href="http://localhost:8080/logout">Log out</a></li>
+                    <li>
+                        <div><em>2</em><span>Spakuj je w worki</span></div>
+                    </li>
+                    <li>
+                        <div><em>3</em><span>Wybierz fundację</span></div>
+                    </li>
+                    <li>
+                        <div><em>4</em><span>Zamów kuriera</span></div>
+                    </li>
                 </ul>
             </div>
         </div>
-
-    </nav>
+    </div>
 </header>
