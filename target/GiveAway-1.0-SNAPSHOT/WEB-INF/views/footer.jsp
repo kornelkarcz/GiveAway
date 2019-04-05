@@ -1,67 +1,23 @@
-<footer class="page-footer font-small unique-color-dark" id="footer">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<footer>
+    <div class="contact">
+        <h2>Skontaktuj się z nami</h2>
+        <h3>Formularz kontaktowy</h3>
+        <form class="form--contact">
+            <div class="form-group form-group--50"><input type="text" name="name" placeholder="Imię"/></div>
+            <div class="form-group form-group--50"><input type="text" name="surname" placeholder="Nazwisko"/></div>
 
-    <div style="background-color: #6351ce; float: none">
-        <div class="container">
+            <div class="form-group"><textarea name="message" placeholder="Wiadomość" rows="1"></textarea></div>
 
-            <!-- Grid row-->
-            <div class="row py-4 d-flex align-items-center">
-
-
-            </div>
+            <button class="btn" type="submit">Wyślij</button>
+        </form>
+    </div>
+    <div class="bottom-line">
+        <span class="bottom-line--copy">Copyright &copy; 2018</span>
+        <div class="bottom-line--icons">
+            <a href="#" class="btn btn--small"><img src="images/icon-facebook.svg"/></a> <a href="#"
+                                                                                            class="btn btn--small"><img
+                src="images/icon-instagram.svg"/></a>
         </div>
     </div>
-
-    <!-- Footer Links -->
-    <div class="container text-center text-md-left mt-5">
-
-        <!-- Grid row -->
-        <div class="row mt-3">
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-
-                <!-- Content -->
-                <h6 class="font-weight-bold">Privacy Policy</h6>
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                <!-- Links -->
-                <h6 class="font-weight-bold">About Us</h6>
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                <h6 class="font-weight-bold">Terms And Conditions</h6>
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-                <!-- Links -->
-                <h6 class="font-weight-bold">Terms of Use</h6>
-
-            </div>
-            <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-    </div>
-    <!-- Footer Links -->
-
-
-    <!-- Copyright -->
-    <%--<div class="footer-copyright text-center py-3">© 2019 Copyright:--%>
-    <%--<a style="border: white" href="https://mdbootstrap.com/education/bootstrap/"> Kornel Karcz</a>--%>
-    <%--</div>--%>
-    <!-- Copyright -->
 </footer>

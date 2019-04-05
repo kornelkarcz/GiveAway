@@ -1,3 +1,6 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <header class="header--form-page">
     <nav class="container container--70">
         <ul class="nav--actions">
@@ -22,7 +25,7 @@
                 >
             </li>
             <li><a href="#" class="btn btn--without-border">Kontakt</a></li>
-            <li><a href="http://localhost:8080/login" class="btn btn--without-border">Zarządzaj</a></li>
+            <li><a href="http://localhost:8080/admin/dashboard" class="btn btn--without-border">Zarządzaj</a></li>
         </ul>
     </nav>
 
