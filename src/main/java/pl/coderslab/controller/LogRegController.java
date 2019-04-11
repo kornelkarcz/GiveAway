@@ -1,72 +1,96 @@
 package pl.coderslab.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import pl.coderslab.model.FakeUser;
+import org.springframework.web.servlet.ModelAndView;
+import pl.coderslab.dto.UserDto;
 import pl.coderslab.model.User;
 import pl.coderslab.service.UserService;
-import pl.coderslab.utils.BCrypt;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-import java.util.List;
 
 @Controller
+@RequiredArgsConstructor
 @RequestMapping("/")
 @SessionAttributes({"logged", "check"})
 public class LogRegController {
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
 
     @GetMapping("register")
-    public String registerUser(Model model) {
-        model.addAttribute("user", new User());
-        return "/register/register";
+    public String showRegistrationForm(Model model) {
+        UserDto userDto = new UserDto();
+        model.addAttribute("user", userDto);
+        return "register";
     }
 
     @PostMapping("register")
-    public String registerUser(@Valid User user, BindingResult result) {
+    public ModelAndView registerUser(@ModelAttribute("user") @Valid UserDto userDto, BindingResult result) {
+
+        User registeredUser = new User();
+        if (!result.hasErrors()){
+            userDto.setEnabled(false);
+            userDto.setIsAdmin(false);
+            System.out.println(userDto.toString());
+            registeredUser = createUserAccount(userDto);
+            System.out.println(registeredUser.toString());
+        }
+
+        if (registeredUser == null) {
+            result.rejectValue("email", "message.regError");
+        }
+
         if (result.hasErrors()) {
-            return "register";
-        }
-        userService.registerUser(user);
-        return "redirect:/";
-    }
-
-    @GetMapping("login")
-    public String loginUser(Model model) {
-        model.addAttribute("fake", new FakeUser());
-        return "login/login";
-    }
-
-    @PostMapping("login")
-    public String loginUser(@ModelAttribute FakeUser fakeUser, Model model, RedirectAttributes redirectAttributes) {
-        List<User> users = userService.findAllUsers();
-        User logged = new User();
-        for (User tempUser : users) {
-            if (fakeUser.getEmail().equals(tempUser.getEmail())) {
-                if (BCrypt.checkpw(fakeUser.getPassword(), tempUser.getPassword())) {
-                    logged = tempUser;
-                    break;
-                } else {
-                    return "redirect:/login";
-                }
-            }
+            return new ModelAndView("register", "user", userDto);
+        } else {
+            return new ModelAndView("successRegister", "user", userDto);
         }
 
-        boolean check = logged.isAdmin();
-        redirectAttributes.addFlashAttribute(check);
-        model.addAttribute("logged", logged);
-        model.addAttribute("check", check);
-        System.out.println(check);
-
-        return "redirect:/";
     }
+
+    private User createUserAccount(UserDto userDto) {
+        User registered = null;
+        try {
+            registered = userService.registerUser(userDto);
+        } catch (Exception e) {
+            return null;
+        }
+        return registered;
+    }
+//
+//    @GetMapping("login")
+//    public String loginUser(Model model) {
+//        model.addAttribute("fake", new FakeUser());
+//        return "login/login";
+//    }
+
+//    @PostMapping("login")
+//    public String loginUser(@ModelAttribute FakeUser fakeUser, Model model, RedirectAttributes redirectAttributes) {
+//        List<User> users = userService.findAllUsers();
+//        User logged = new User();
+//        for (User tempUser : users) {
+//            if (fakeUser.getEmail().equals(tempUser.getEmail())) {
+//                if (BCrypt.checkpw(fakeUser.getPassword(), tempUser.getPassword())) {
+//                    logged = tempUser;
+//                    break;
+//                } else {
+//                    return "redirect:/login";
+//                }
+//            }
+//        }
+//
+//        boolean check = logged.isAdmin();
+//        redirectAttributes.addFlashAttribute(check);
+//        model.addAttribute("logged", logged);
+//        model.addAttribute("check", check);
+//        System.out.println(check);
+//
+//        return "redirect:/";
+//    }
 
     @GetMapping("logout")
     public String logout(HttpSession session) {

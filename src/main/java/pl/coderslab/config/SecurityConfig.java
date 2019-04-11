@@ -40,9 +40,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(final HttpSecurity http) throws Exception {
 
-        //TODO dodać tutaj strony dostępne dla wszystkich
         http.authorizeRequests()
-                .antMatchers()
+                .antMatchers("/", "/login", "/perform_login", "/logout", "/perform_logout", "/register")
                 .permitAll();
 
 

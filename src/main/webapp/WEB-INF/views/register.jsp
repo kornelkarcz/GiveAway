@@ -32,25 +32,29 @@
 
             <section class="login-page">
                 <h2>Zarejestruj się</h2>
-                <form:form method="post" modelAttribute="user">
+                <form method="post" modelAttribute="user" name="registerForm" action="/register">
                     <div class="form-group">
-                        <form:input path="firstName" type="firstName" name="firstName" placeholder="Imię"/>
+                        <input path="firstName" type="firstName" name="firstName" placeholder="Imię"/>
                     </div>
                     <div class="form-group">
-                        <form:input path="lastName" type="lastName" name="lastName" placeholder="Nazwisko"/>
+                        <input path="lastName" type="lastName" name="lastName" placeholder="Nazwisko"/>
                     </div>
                     <div class="form-group">
-                        <form:input path="email" type="email" name="email" placeholder="Email"/>
+                        <input path="email" type="email" name="email" placeholder="Email"/>
                     </div>
                     <div class="form-group">
-                        <form:input path="password" type="password" name="password" placeholder="Hasło"/>
+                        <input path="password" type="password" name="password" placeholder="Hasło"/>
+                    </div>
+                    <div class="form-group">
+                        <input path="matchingPassword" type="password" name="matchingPassword" placeholder="Powtórz hasło"/>
                     </div>
 
                     <div class="form-group form-group--buttons">
-                        <a href="#" class="btn btn--without-border">Załóż konto</a>
+                        <button class="btn" type="submit">Załóż konto</button>
+                        <%--TODO doać patha do logowania--%>
                         <button class="btn" type="submit">Zaloguj się</button>
                     </div>
-                </form:form>
+                </form>
             </section>
         </div>
     </div>
