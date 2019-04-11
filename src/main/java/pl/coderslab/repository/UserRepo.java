@@ -10,4 +10,6 @@ public interface UserRepo extends JpaRepository<User, Long> {
 
     @Query(value = "select * from users where isAdmin = false", nativeQuery = true)
     List<User> findAllNormalUsers();
+
+    User findByEmail(String email);
 }

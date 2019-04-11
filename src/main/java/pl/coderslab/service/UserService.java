@@ -1,22 +1,20 @@
 package pl.coderslab.service;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import pl.coderslab.model.User;
+import pl.coderslab.repository.RoleRepo;
 import pl.coderslab.repository.UserRepo;
 
 import java.util.List;
 
-@@Service
+@Service
 @RequiredArgsConstructor
 public class UserService {
 
     private final UserRepo userRepo;
-
+    private final RoleRepo roleRepo;
     private final BCryptPasswordEncoder passwordEncoder;
 
     public void registerUser(User user) {
