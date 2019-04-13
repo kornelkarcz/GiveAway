@@ -61,8 +61,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .failureUrl("/login?error=true")
                 .usernameParameter("email")
                 .passwordParameter("password")
-                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logout_success")
-                .and().exceptionHandling().accessDeniedPage("403");
+                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logout_success");
 
 
         http.csrf().disable();
