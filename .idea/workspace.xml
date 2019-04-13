@@ -179,12 +179,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/service/MyUserDetailService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#682#683#0" expanded="true" />
                 <element signature="e#719#720#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/config/security/CurrentUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#562#563#0" expanded="true" />
+                <element signature="e#587#588#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -325,6 +338,7 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/config/security/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/config/security/CurrentUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/service/MyUserDetailService.java" />
       </list>
     </option>
@@ -507,7 +521,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555147162429" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555147500895" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -642,12 +656,12 @@
       <workItem from="1552467326652" duration="30635000" />
       <workItem from="1552598958111" duration="1977000" />
       <workItem from="1554447381743" duration="5813000" />
-      <workItem from="1554982791298" duration="11300000" />
+      <workItem from="1554982791298" duration="11790000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49725000" />
+    <option name="totallyTimeSpent" value="50215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="812" extended-state="0" />
@@ -696,13 +710,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/footer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="65" selection-start-column="65" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/loggedBody.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4665">
@@ -1060,12 +1067,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/service/MyUserDetailService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/config/security/CurrentUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#562#563#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/service/MyUserDetailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
             <element signature="e#682#683#0" expanded="true" />
             <element signature="e#719#720#0" expanded="true" />
           </folding>

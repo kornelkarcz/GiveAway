@@ -7,13 +7,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import pl.coderslab.model.MyUserDetails;
+import pl.coderslab.config.security.CurrentUser;
 import pl.coderslab.model.Role;
 import pl.coderslab.model.User;
-import pl.coderslab.repository.UserRepo;
 
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 @Service
