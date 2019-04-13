@@ -81,6 +81,7 @@
       <change afterPath="$PROJECT_DIR$/../SpringCMS/src/main/webapp/WEB-INF/views/categories/all.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../SpringCMS/src/main/webapp/WEB-INF/views/categories/edit.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/config/security/SecurityConfig.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -131,13 +132,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/config/security/SecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="903">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="-233">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2874#2875#0" expanded="true" />
+                <element signature="e#2922#2923#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,11 +160,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/config/WebAppConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -329,10 +335,10 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/config/security/CurrentUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/service/MyUserDetailService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/config/security/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/config/security/CustomDaoAuthenticationProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/config/security/CustomAuthenticationFailureHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/config/WebAppConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/config/security/SecurityConfig.java" />
       </list>
     </option>
   </component>
@@ -524,7 +530,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555150266377" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555150684808" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -662,12 +668,12 @@
       <workItem from="1552467326652" duration="30635000" />
       <workItem from="1552598958111" duration="1977000" />
       <workItem from="1554447381743" duration="5813000" />
-      <workItem from="1554982791298" duration="14208000" />
+      <workItem from="1554982791298" duration="14727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52633000" />
+    <option name="totallyTimeSpent" value="53152000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="812" extended-state="0" />
@@ -1066,16 +1072,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/config/security/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/config/security/CustomAuthenticationFailureHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1100,8 +1096,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/config/WebAppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/config/security/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-233">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2874#2875#0" expanded="true" />
+            <element signature="e#2922#2923#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

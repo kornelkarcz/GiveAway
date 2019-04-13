@@ -32,11 +32,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(userDetailService).passwordEncoder(passwordEncoder());
     }
 
-    @Bean
-    public BCryptPasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
     @Override
     protected void configure(final HttpSecurity http) throws Exception {
 
@@ -68,6 +63,28 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.headers().frameOptions().disable();
     }
 
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public MyUserDetailService myUserDetailService() {
+        return new MyUserDetailService();
+    }
+
+    @Bean
+    public CustomDaoAuthenticationProvider authenticationProvider() {
+        CustomDaoAuthenticationProvider authProvider = new CustomDaoAuthenticationProvider();
+        authProvider.setUserDetailsService(userDetailService);
+        authProvider.setPasswordEncoder(passwordEncoder());
+        return authProvider;
+    }
+
+    @Bean
+    public CustomAuthenticationFailureHandler customAuthenticationFailureHandler() {
+        return new CustomAuthenticationFailureHandler();
+    }
     @Bean
     public PersistentTokenRepository persistentTokenRepository() {
         JdbcTokenRepositoryImpl db = new JdbcTokenRepositoryImpl();
