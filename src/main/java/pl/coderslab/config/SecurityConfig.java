@@ -44,6 +44,26 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/", "/login", "/perform_login", "/logout", "/perform_logout", "/register")
                 .permitAll();
 
+        http.authorizeRequests()
+                .antMatchers("/user_info").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
+
+        http.authorizeRequests()
+                .antMatchers("/admin").access("hasRole('ROLE_ADMIN')");
+
+        http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
+
+        http.authorizeRequests().and()
+                .formLogin()
+                .loginProcessingUrl("/perform_login")
+                .loginPage("/login")
+//                .defaultSuccessUrl("/user_info")
+                .defaultSuccessUrl("/")
+                .failureUrl("/login?error=true")
+                //TODO dałem tu email i nadal nie dziala
+                .usernameParameter("email")
+                .passwordParameter("password")
+                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logout_success");
+
 
         http.csrf().disable();
         http.headers().frameOptions().disable();

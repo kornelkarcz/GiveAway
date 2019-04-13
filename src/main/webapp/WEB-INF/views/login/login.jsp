@@ -31,12 +31,12 @@
 
             <section class="login-page">
                 <h2>Zaloguj się</h2>
-                <form:form method="post" modelAttribute="fake">
+                <form name="loginForm" method="POST" action="/perform_login">
                     <div class="form-group">
-                        <form:input path="email" type="email" name="email" placeholder="Email"/>
+                        <input type="text" name="email" placeholder="Email"/>
                     </div>
                     <div class="form-group">
-                        <form:input path="password" type="password" name="password" placeholder="Hasło"/>
+                        <input type="password" name="password" placeholder="Hasło"/>
                     </div>
                     <div class="form-group">
                         <a href="#" class="btn btn--small btn--without-border">Przypomnij hasło</a>
@@ -46,7 +46,7 @@
                         <a href="#" class="btn btn--without-border">Załóż konto</a>
                         <button class="btn" type="submit">Zaloguj się</button>
                     </div>
-                </form:form>
+                </form>
             </section>
         </div>
     </div>

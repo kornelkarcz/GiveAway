@@ -25,7 +25,7 @@ public class LogRegController {
     public String showRegistrationForm(Model model) {
         UserDto userDto = new UserDto();
         model.addAttribute("user", userDto);
-        return "register";
+        return "register/register";
     }
 
     @PostMapping("register")
@@ -45,9 +45,9 @@ public class LogRegController {
         }
 
         if (result.hasErrors()) {
-            return new ModelAndView("register", "user", userDto);
+            return new ModelAndView("register/register", "user", userDto);
         } else {
-            return new ModelAndView("successRegister", "user", userDto);
+            return new ModelAndView("register/successRegister", "user", userDto);
         }
 
     }
@@ -61,12 +61,11 @@ public class LogRegController {
         }
         return registered;
     }
-//
-//    @GetMapping("login")
-//    public String loginUser(Model model) {
-//        model.addAttribute("fake", new FakeUser());
-//        return "login/login";
-//    }
+
+    @GetMapping("login")
+    public String loginUser(Model model) {
+        return "login/login";
+    }
 
 //    @PostMapping("login")
 //    public String loginUser(@ModelAttribute FakeUser fakeUser, Model model, RedirectAttributes redirectAttributes) {

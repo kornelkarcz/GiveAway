@@ -12,7 +12,7 @@ public class MyUserDetails extends User implements UserDetails {
     public MyUserDetails(User user) {
         this.setFirstName(user.getFirstName());
         this.setLastName(user.getLastName());
-        this.setEmail(user.getPassword());
+        this.setEmail(user.getEmail());
         this.setPassword(user.getPassword());
         this.setEnabled(user.isEnabled());
         this.setAdmin(user.isAdmin());
