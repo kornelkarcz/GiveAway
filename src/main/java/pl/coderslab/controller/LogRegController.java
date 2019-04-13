@@ -2,99 +2,54 @@ package pl.coderslab.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import pl.coderslab.dto.UserDto;
 import pl.coderslab.model.User;
-import pl.coderslab.service.UserService;
+import pl.coderslab.service.UserServiceImpl;
 
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+
 
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/")
-@SessionAttributes({"logged", "check"})
 public class LogRegController {
 
-    private final UserService userService;
+    private final UserServiceImpl userService;
 
-    @GetMapping("register")
-    public String showRegistrationForm(Model model) {
-        UserDto userDto = new UserDto();
-        model.addAttribute("user", userDto);
-        return "register/register";
+    @GetMapping("/login")
+    public ModelAndView login() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("login");
+        return modelAndView;
     }
 
-    @PostMapping("register")
-    public ModelAndView registerUser(@ModelAttribute("user") @Valid UserDto userDto, BindingResult result) {
+    @GetMapping("/register")
+    public ModelAndView registration() {
+        ModelAndView modelAndView = new ModelAndView();
+        User user = new User();
+        modelAndView.addObject("user", user);
+        modelAndView.setViewName("register");
+        return modelAndView;
+    }
 
-        User registeredUser = new User();
-        if (!result.hasErrors()){
-            userDto.setEnabled(false);
-            userDto.setIsAdmin(false);
-            System.out.println(userDto.toString());
-            registeredUser = createUserAccount(userDto);
-            System.out.println(registeredUser.toString());
+    @PostMapping("/register")
+    public ModelAndView createNewUser(@Valid User user, BindingResult result) {
+        ModelAndView modelAndView = new ModelAndView();
+        User userExists = userService.findByEmail(user.getEmail());
+        if (userExists != null) {
+            result.rejectValue("email", "error.user", "There is already a user registered with the email provided");
         }
-
-        if (registeredUser == null) {
-            result.rejectValue("email", "message.regError");
-        }
-
         if (result.hasErrors()) {
-            return new ModelAndView("register/register", "user", userDto);
+            modelAndView.setViewName("register");
         } else {
-            return new ModelAndView("register/successRegister", "user", userDto);
+            userService.saveUser(user);
+            modelAndView.addObject("successMessage", "User has been registered successfully.");
+            modelAndView.addObject("user", new User());
+            modelAndView.setViewName("register");
         }
-
-    }
-
-    private User createUserAccount(UserDto userDto) {
-        User registered = null;
-        try {
-            registered = userService.registerUser(userDto);
-        } catch (Exception e) {
-            return null;
-        }
-        return registered;
-    }
-
-    @GetMapping("login")
-    public String loginUser(Model model) {
-        return "login/login";
-    }
-
-//    @PostMapping("login")
-//    public String loginUser(@ModelAttribute FakeUser fakeUser, Model model, RedirectAttributes redirectAttributes) {
-//        List<User> users = userService.findAllUsers();
-//        User logged = new User();
-//        for (User tempUser : users) {
-//            if (fakeUser.getEmail().equals(tempUser.getEmail())) {
-//                if (BCrypt.checkpw(fakeUser.getPassword(), tempUser.getPassword())) {
-//                    logged = tempUser;
-//                    break;
-//                } else {
-//                    return "redirect:/login";
-//                }
-//            }
-//        }
-//
-//        boolean check = logged.isAdmin();
-//        redirectAttributes.addFlashAttribute(check);
-//        model.addAttribute("logged", logged);
-//        model.addAttribute("check", check);
-//        System.out.println(check);
-//
-//        return "redirect:/";
-//    }
-
-    @GetMapping("logout")
-    public String logout(HttpSession session) {
-        session.invalidate();
-        return "login/logout";
+        return modelAndView;
     }
 
 }
