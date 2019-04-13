@@ -1,4 +1,4 @@
-package pl.coderslab.config;
+package pl.coderslab.config.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -59,10 +59,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .defaultSuccessUrl("/user_info")
                 .defaultSuccessUrl("/")
                 .failureUrl("/login?error=true")
-                //TODO dałem tu email i nadal nie dziala
                 .usernameParameter("email")
                 .passwordParameter("password")
-                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logout_success");
+                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logout_success")
+                .and().exceptionHandling().accessDeniedPage("403");
 
 
         http.csrf().disable();
